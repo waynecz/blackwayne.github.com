@@ -1,5 +1,7 @@
+	        
 $(function(){
 	var wh=$(window).height();
+	
 	$("header").css("height",wh+10);
 	
 	$("#nav").find(".nav_f_l").mouseover(function(){
@@ -35,7 +37,31 @@ $(function(){
 				$("body,html").stop();
 				$("body,html").animate({scrollTop:5000},1500);
 				});	
+	
+	$("#statement").find("li:first-child").mouseover(function(){
 		
+		$(this).html("Hover后点击剑身");
+		});
+	$("#statement").find("li:first-child").mouseout(function(){
+		
+		$(this).html("御剑飞行");
+		});
+		
+		
+			$("#statement").find("li[title='hahaha']").mouseover(function(){
+		
+		$(this).html("现为半成品,尝试了响应设计，断点912px");
+		});
+	$("#statement").find("li[title='hahaha']").mouseout(function(){
+		
+		$(this).html("由翁诚舟设计并开发");
+		});	
+		
+		
+	$("#to_contact").click(function(){
+				
+				$("body,html").animate({scrollTop:2900},400);
+				});		
 	/*function delay(t1,t2,dom){
 		setTimeout(function(){dom.fadeIn(t1)},t2)};*/
 		
@@ -47,7 +73,9 @@ $(function(){
 		var lg1=$("#logo1");
 		var lg2=$("#logo2");
 		var lg3=$("#logo3");
+		var ww=$(window).width();
 		console.log(top);
+		
 		
 	    $("#logo2").mouseover(function(){
 			if(top<1400&&top>=0) {
@@ -67,6 +95,23 @@ $(function(){
 	            }
 			
 			});
+			
+			
+			
+		if(ww>912){
+			if (top>500){
+		$("#intro p").css({"opacity":1,"left":"5.5%"});
+		$("#portrait").css({"opacity":1,"right":"7%"});
+		}}
+		else if (ww<=912){
+			if (top>500){
+			$("#intro p").css({"opacity":1,"left":"4.5%"});
+		    $("#portrait").css({"opacity":1,"right":"37%"});
+		}
+		};
+		if (top>1200){	
+		$("#list_1 ").css({"opacity":1});
+		};
 	/*	$("#logo2").mouseover(function(){
 		$(this).css({"transform":"rotate(180deg) scale(1.1)","left":80,"top":100});
 		

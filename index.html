@@ -1,15 +1,32 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
+<script  type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <meta charset="utf-8">
+<meta name="keywords" content="翁诚舟" />
+<meta name="keywords" content="BlackWayne" />
+<meta name="description" content="翁诚舟的简历" />
 <meta http-equiv="X-UA-compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width" initial-scale="1" user-scalable="no">
 <title>Black Wayen</title>
-<link href="stylesheets/main.css"  rel="stylesheet">
-<script src="javascripts/main.js"></script>
-<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
-<link rel="shortcut icon" href="img/way.ico" type="image/x-icon">
+<link href="css/main.css"  rel="stylesheet">
 <link rel="icon" href="img/way.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/way.ico" type="image/x-icon">
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+<!--引用MapboxAPI-->
+
+
+
+<style type="text/css">
+    
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+
+
+
 </head>
 <body>
   <div id="nav_wrap"></div>
@@ -20,25 +37,24 @@
         <img id="logo3" class="logo_m" src="img/logo_m.png" />
              <ul class="fmenu">
                   <li class="nav_f_l">
-                    <a class="f_h" href="#">关于我</a>
-                    <ul>
+                    <img class="jiao3" src="img/jiao.png"/><a class="f_h" href="#intro">关于我</a>
+                 <!--   <ul>
                             <span class="kong"></span>
                             <li><a href="#">简介</a></li>
                             <li><a href="#">一些練習</a></li>
                             
-                    </ul>
+                    </ul>-->
                   </li>
                   <li class="nav_f_l">
-                    <a class="f_h" href="#">一些经历</a>
+                    <img class="jiao3" src="img/jiao.png"/><a class="f_h" href="#experience">做的事情</a>
                     <ul>
                             <span class="kong"></span>
-                            <li><a href="#">校园内</a></li>
-                            <li><a href="#">实习里</a></li>
-                            <li><a href="#">奖励</a></li>
+                            <li><a href="#experience">校园/社会</a></li>
+                            <li><a href="#photo">摄影</a></li>          
                     </ul>
                   </li>
                   <li class="nav_f_l">
-                    <a class="f_h" href="#">聯繫我</a>
+                    <img class="jiao3" src="img/jiao.png"/><a id="to_contact" class="f_h">聯繫我</a>
                   <!--   <ul>
                             <span class="kong"></span>
                             <li><a href="#">微博</a></li>
@@ -55,17 +71,121 @@
    <span>
    <span>
 </header>  
-<section id="gap" class="gap">
+<!--<section  class="gap">
     <h2>我是谁</h2><span></span>
-</section>
-<section id="intro">
-   <blockquote><p>“目前我在浙江科技学院，读着测控技术与仪器专业，一只名貌不扬的小人物</p><p>拥抱着似小未大的梦想。我是一名工科生，但我热爱着设计，</p><p>热爱着编程。您好！我叫”</p> </blockquote>
-   <h3>翁诚舟</h3>
+</section>-->
+<section id="intro" class="duan">
+
+<p><img class="jiao" src="img/jiao.png"/>小和山里青葱树旁的浙江科技学院，在此我念着一个电气类专业。一只名貌不扬的小人物手中攥紧着费尽脑汁挤出的梦想，我是一名工科生，也热爱着设计，也热爱着编程。您好，我叫翁诚舟</p>
+<p>说起来在前端设计的路上起步未久，却深深地喜欢这种设计与程序结合的感觉。前端之海广阔深奥，我也没有聪明的大脑，可幸的是喜欢琢磨；内向但愿意沟通，现在的我期望从自学中走出一步，得到一份珍贵的学习机会，尽力在这份机会中踏实地进步</p>
+   <img id="portrait" class="portrait" src="img/portrait1.png" title="头像"/>   
   
 </section>
+          <section id="gap" class="gap">
+              <h2><!--<img class="jiao3" src="img/jiao.png"/>-->Experience</h2>
+          </section>
+<section id="experience" class="duan">
+   <div class="container">
+    <ul id="list_1" class="list op_0 ">
+        <li>
+            <ul>
+                <li>
+                    <h4>杭州网营科技有限公司</h4>
+                    <p>设计实习生，主要负责品牌商品在天猫京东等网店的详情页和头图的制作与一些的简单的设计，在这次实习中基本掌握了PS的操作技能及一些设计的步骤、沟通的能力、执行的效率。</p>
+                </li>
+                <li>
+                    <h4>北京趣拿信息技术有限公司</h4>
+                    <p>去哪儿网实习摄影师，负责酒店旅馆房型的拍摄及信息的收录用作去哪儿网上的展示，收获：联系拍摄锻炼了沟通能力;合理的安排和执行保证拍摄任务数的完成。</p>
+                </li>
+            </ul>   
+        </li>
+        <li>
+            <ul>
+                <li>
+                    <h4>咖啡陪你Caffee Bene </h4>
+                    <p>兼职咖啡师，其实说是咖啡师，但是却没接触过咖啡类的产品，主要是负责端、洗、清理和果汁饮料及面包类的制作，这份兼职干的挺开心的，用赚的钱买了自己的相机。</p>
+                </li>
+                <li>
+                    <h4>天行家教</h4>
+                    <p>教员，当了几个初中学生的家教老师，几个小孩一直很调皮，对学习有很大的抗拒性，不过也正因如此对耐心也是很好的考验。</p>
+                </li>
+            </ul>
+        </li>
+        <li>
+             <ul>
+                <li  class="m_1">
+                    <h4>校孔子学堂</h4>
+                    <p>宣传部部长，负责学堂活动的宣传推广（制作海报、横幅等）</p>
+                </li>
+                <li class="m_1">
+                    <h4>校园品牌鞋子销售</h4>
+                    <p>在学校内做鞋子的销售代理，销售成绩非常平庸，因为宣传不善，最终结束。</p>
+                </li>
+                <li  class="end_e" >
+                    <h4>校招生办等其他活动方</h4>
+                    <p>拍摄校招生宣传手册宣传图；沙龙、舞会、会议等的拍摄。</p> <img class="jiao2" src="img/jiao.png"/>
+                </li>
+            </ul>
+       </li>
+    </ul>  
+ </div>     
+</section>
+          <!--<section  class="gap">
+              <h2>目前掌握的</h2>
+          </section>
+<section  id="skill" class="duan">
 
-<section></section>
-<section></section>
-<section>啊啊啊啊</section>
+</section>
+          <section  class="gap">
+              <h2>拍照</h2>
+          </section>-->
+<section  id="photo" class="duan">
+  <ul class="clearfix">
+      <li><img src="img/photo1.jpg"/><div class="red">click to see more...</div></li>
+      <li><img src="img/photo2.jpg"/><div class="red">but...</div></li>
+      <li><img src="img/photo3.jpg"/><div class="red">the website is bulding...</div></li>
+  </ul>
+</section>
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<br/>	
+<p class="address">西和公寓 浙江科技学院</p>
+<div  class="school" ><img id="school"src="img/school2.jpg" title="科院茶亭"/></div>
+<br/>
+<ul class="contact_way">
+    <li>TEL: &nbsp;&nbsp; +86 158-6816-3882</li>
+    <li>EMAIL:&nbsp; <a href="mailto:451578533@qq.com" target="_blank">henmeiweide@foxmail.com</a></li>
+    <li>WEIBO: &nbsp;<a href="http://weibo.com/2493134151" target="_blank">henmeiweide</a></li>
+</ul>
+<form action="/.asp" method="get" autocomplete="on">
+<input id="name" class="input" type="text" name="fullname" 
+      placeholder="Name" >
+<input id="email" class="input"  type="email" name="email" 
+      placeholder="Eamil" >
+<input id="subject" class="input"  type="text"  name="subject"
+      placeholder="Subject" >
+<textarea id="message" name="message" rows="3" cols="20"  class="input" placeholder="Message" ></textarea>
+<input class="button" type="submit" value="Submit" />
+</form>
+</section>
+             <div  class="gap gap_map">
+                   <div id='map'></div><!--地图容器-->
+                   <h2>Location</h2> 
+              
+             </div>
+<footer>
+<ul id="statement" class="clearfix">
+    <li>御剑飞行</li>
+    <li title="hahaha">由翁诚舟设计并开发</li>
+    <li><a href="verson1.html" target="_blank">Verson 1.0链接</a></li>
+</ul>
+</footer>             
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoid2VuY2VueiIsImEiOiJvNFZzOEo0In0.i3XTRJZ-kUKlqWIHBh6tMg';
+var map = L.mapbox.map('map', 'wencenz.li160n66')
+    .setView([30.2289,120.0154], 8);
+</script>
 </body>
+
 </html>
